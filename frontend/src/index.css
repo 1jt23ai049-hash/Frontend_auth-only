@@ -1,0 +1,199 @@
+/* ============================================================
+   AgriQR Design System — plain CSS (CRA-friendly)
+   Original palette: Field Green (primary) · Harvest Amber (accent) ·
+   warm-grey neutrals. Adapted from the PharmaQR reference stylesheet.
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9f3 !important;
+  color: #1f2933;
+  font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Comfortable tap targets on touch devices */
+@media (pointer: coarse) {
+  button,
+  a[role="button"],
+  .MuiButtonBase-root {
+    min-height: 40px;
+  }
+}
+
+::selection {
+  background-color: rgba(224, 147, 46, 0.18);
+  color: #1f2933;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(224, 147, 46, 0.5);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6dccb;
+  border-radius: 999px;
+  border: 2px solid #f8f9f3;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f6b3c;
+}
+
+.pq-section {
+  scroll-margin-top: 76px;
+}
+@media (min-width: 600px) {
+  .pq-section {
+    scroll-margin-top: 106px;
+  }
+}
+.pq-divider-brand {
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e0932e, #f0b96a);
+}
+.pq-divider-cool {
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2f6b3c, #4e8c5b);
+}
+
+@keyframes morphBlob {
+  0% {
+    border-radius: 42% 58% 62% 38% / 54% 36% 64% 46%;
+  }
+  50% {
+    border-radius: 58% 42% 40% 60% / 42% 58% 42% 58%;
+  }
+  100% {
+    border-radius: 42% 58% 62% 38% / 54% 36% 64% 46%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(224, 147, 46, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(224, 147, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(224, 147, 46, 0);
+  }
+}
+
+@keyframes scanPulse {
+  0% {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+@keyframes iconBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes headerDrop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes underlineIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
